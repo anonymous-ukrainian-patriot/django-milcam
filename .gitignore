@@ -1,0 +1,32 @@
+# django-milcam
+# .gitignore
+
+.*.swp
+*.pyc
+*.log
+*.pot
+*.pyo
+*.pyd
+*~
+*.orig
+*.bak
+.DS_Store
+*.save
+
+.idea/*
+*sublime*
+*geany*
+*komodo*
+build/*
+dist/*
+*.egg-info/*
+tmp/*
+logs/*
+log/*
+parts
+.project
+.pydevproject
+.settings/*
+media/*
+*venv*
+README.html

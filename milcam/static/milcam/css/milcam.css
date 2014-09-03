@@ -1,0 +1,32 @@
+/* django-milcam */
+/* milcam/static/milcam/css/milcam.css */
+
+.tablesorter .header .glyphicon {
+    display: none;
+    float: right;
+}
+
+.tablesorter .header.sort .glyphicon-sort {
+    display: inline-block;
+}
+
+.tablesorter .header.sort .glyphicon-sort-by-attributes,
+.tablesorter .header.sort .glyphicon-sort-by-attributes-alt {
+    display: none;
+}
+
+.tablesorter .header.sort.asc .glyphicon-sort {
+    display: none;
+}
+
+.tablesorter .header.sort.asc .glyphicon-sort-by-attributes {
+   display: inline-block;
+}
+
+.tablesorter .header.sort.dsc .glyphicon-sort {
+    display: none;
+}
+
+.tablesorter .header.sort.dsc .glyphicon-sort-by-attributes-alt {
+    display: inline-block;
+}

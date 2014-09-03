@@ -1,0 +1,62 @@
+{# django-milcam #}
+{# milcam/templates/milcam/js/photos_table_tpl.html #}
+
+{% load i18n %}
+
+<script type="text/template" id="id-photos-table-tpl">
+    <% if (photos.length) { %>
+        <table class="table table-bordered table-striped table-hover tablesorter">
+            <thead>
+                <tr>
+                    <th title="{% trans "Photo" %}">
+                        {% trans "Photo" %}
+                    </th>
+                    <th title="{% trans "Date/Time" %}">
+                        {% trans "Date/Time" %}
+                    </th>
+                    <th title="{% trans "Latitude" %}" class="sort">
+                        <i class="glyphicon glyphicon-sort"></i>
+                        <i class="glyphicon glyphicon-sort-by-attributes"></i>
+                        <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
+                        {% trans "Latitude" %}
+                    </th>
+                    <th title="{% trans "Longitude" %}" class="sort">
+                        <i class="glyphicon glyphicon-sort"></i>
+                        <i class="glyphicon glyphicon-sort-by-attributes"></i>
+                        <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
+                        {% trans "Longitude" %}
+                    </th>
+                    <th title="{% trans "Device" %}" class="sort">
+                        <i class="glyphicon glyphicon-sort"></i>
+                        <i class="glyphicon glyphicon-sort-by-attributes"></i>
+                        <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
+                        {% trans "Device" %}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% _.each(photos, function(photo) { %>
+                    <tr title="<%= photo.get('device').get('uuid') %>" class="photo" data-photo-id="<%= photo.get('id') %>">
+                        <td>
+                            <a href="<%= photo.get('image') %>" target="_blank"><img src="<%= photo.get('image') %>" alt="{% trans "Photo" %}" width="60px" height="60px"/></a>
+                        </td>
+                        <td>
+                            <%= moment(photo.get('created')).format('LLL') %>
+                        </td>
+                        <td>
+                            <%= photo.get('latitude') %>
+                        </td>
+                        <td>
+                            <%= photo.get('longitude') %>
+                        </td>
+                        <td>
+                            <%= photo.get('device').get('uuid') %>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        {% trans "No photos from last day" %}
+    <% } %>
+</script>

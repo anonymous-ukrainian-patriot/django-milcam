@@ -1,0 +1,89 @@
+# django-milcam
+# milcam/locale/en/LC_MESSAGES/django.po
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-milcam\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-11 22:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Anonymous Ukrainian Patriot <anonymous.ukrainian.patriot@gmail.com>\n"
+"Language-Team: EN <anonymous.ukrainian.patriot@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms.py:22 models/device.py:28 models/photo.py:23
+msgid "device"
+msgstr "device"
+
+#: models/device.py:19
+msgid "device unique identifier"
+msgstr "device unique identifier"
+
+#: models/device.py:29
+msgid "devices"
+msgstr "devices"
+
+#: models/photo.py:24
+msgid "image"
+msgstr "image"
+
+#: models/photo.py:25
+msgid "datetime of creation"
+msgstr "datetime of creation"
+
+#: models/photo.py:35 models/photo.py:36
+msgid "photo"
+msgstr "photo"
+
+#: templates/milcam/base.html:12
+msgid "Military Camera"
+msgstr "Military Camera"
+
+#: templates/milcam/base.html:72
+msgid "To work with site enable JavaScript"
+msgstr "To work with site enable JavaScript"
+
+#: templates/milcam/map.html:11
+msgid "Map based on Military Camera data"
+msgstr "Map based on Military Camera data"
+
+#: templates/milcam/map.html:16
+msgid "The map is out there"
+msgstr "The map is out there"
+
+#: templates/milcam/js/photo_infowindow_tpl.html:10
+#: templates/milcam/js/photo_infowindow_tpl.html:18
+#: templates/milcam/js/photos_table_tpl.html:11
+#: templates/milcam/js/photos_table_tpl.html:12
+#: templates/milcam/js/photos_table_tpl.html:41
+msgid "Photo"
+msgstr "Photo"
+
+#: templates/milcam/js/photo_infowindow_tpl.html:11
+#: templates/milcam/js/photos_table_tpl.html:14
+#: templates/milcam/js/photos_table_tpl.html:15
+msgid "Date/Time"
+msgstr "Date/Time"
+
+#: templates/milcam/js/photo_infowindow_tpl.html:12
+#: templates/milcam/js/photos_table_tpl.html:29
+#: templates/milcam/js/photos_table_tpl.html:33
+msgid "Device"
+msgstr "Device"
+
+#: templates/milcam/js/photos_table_tpl.html:17
+#: templates/milcam/js/photos_table_tpl.html:21
+msgid "Latitude"
+msgstr "Latitude"
+
+#: templates/milcam/js/photos_table_tpl.html:23
+#: templates/milcam/js/photos_table_tpl.html:27
+msgid "Longitude"
+msgstr "Longitude"
+
+#: templates/milcam/js/photos_table_tpl.html:60
+msgid "No photos from last day"
+msgstr "No photos from last day"

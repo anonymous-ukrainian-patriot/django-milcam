@@ -1,0 +1,25 @@
+{# django-milcam #}
+{# milcam/templates/milcam/js/photo_infowindow_tpl.html #}
+
+{% load i18n %}
+
+<script type="text/template" id="id-photo-infoWindow-tpl">
+    <table>
+        <thead>
+            <tr>
+                <td>{% trans "Photo" %}</td>
+                <td>{% trans "Date/Time" %}</td>
+                <td>{% trans "Device" %}</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="<%= photo.get('image') %>" target="_blank"><img src="<%= photo.get('image') %>" alt="{% trans "Photo" %}" width="60px" height="60px"/></a>
+                </td>
+                <td><%= moment(photo.get('created')).format('LLL') %></td>
+                <td><%= photo.get('device').get('uuid') %></td>
+            </tr>
+        </tbody>
+    </table>
+</script>

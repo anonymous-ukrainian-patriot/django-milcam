@@ -1,0 +1,82 @@
+{# django-milcam #}
+{# milcam/templates/milcam/base.html #}
+
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}
+                {% trans "Military Camera" %}
+            {% endblock %}
+        </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Language" content="{{ LANGUAGE_CODE }}"/>
+        <meta name="keywords" content=""/>
+        <meta name="author" content=""/>
+        <meta name="robots" content="all"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="author" href="{% static "humans.txt" %}"/>
+        <link rel="shortcut icon" href="{% static "favicon.ico" %}" type="image/x-icon"/>
+        <link rel="canonical" href="{{ request.path }}{% if request.META.QUERY_STRING %}?{{ request.META.QUERY_STRING }}{% endif %}" />
+
+        {% block extra_css_pre %}{% endblock %}
+
+        {# css libs #}
+        <link href="{% static "milcam/lib/bootstrap/css/bootstrap.css" %}" rel="stylesheet" media="screen">
+        <link href="{% static "milcam/lib/bootstrap/css/bootstrap-theme.css" %}" rel="stylesheet" media="screen">
+        {# project css #}
+        <link href="{% static "milcam/css/milcam.css" %}" rel="stylesheet" media="screen">
+
+        {% block extra_css %}{% endblock %}
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="{% static "milcam/lib/html5shim/html5shiv-printshiv.js" %}"></script>
+            <script type="text/javascript" src="{% static "milcam/lib/respond/respond.src.js" %}"></script>
+        <![endif]-->
+
+        {# global js variables #}
+        <script type="text/javascript">
+            var milcam = {
+                    STATIC_URL: '{% get_static_prefix %}',
+                    LANGUAGE: "{{ LANGUAGE_CODE }}"
+                };
+        </script>
+
+        {# js libs #}
+        <script type="text/javascript" src="{% static "milcam/lib/jquery/jquery-1.11.1.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/underscore/underscore.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/backbone/backbone.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/backbone-relational/backbone-relational.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/backbone-tastypie/backbone-tastypie.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/json2/json2.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/js-base64/base64.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/jquery-cookie/jquery.cookie.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/moment.js/moment.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/sprintf.js/sprintf.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/bootstrap/js/bootstrap.js" %}"></script>
+        <script type="text/javascript" src="{% static "milcam/lib/jquery-tablesorter/jquery.tablesorter.js" %}"></script>
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            {# enable js disclaimer #}
+            <noscript>
+                <div class="alert">
+                    {% trans "To work with site enable JavaScript" %}
+                </div>
+            </noscript>
+            {% block content %}{% endblock %}
+        </div>
+
+        {% block js_templates %}{% endblock %}
+        {% block extra_js %}{% endblock %}
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+{# django-milcam #}
+{# milcam/templates/milcam/map.html #}
+
+{% extends "milcam/base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>{% trans "Map based on Military Camera data" %}</h1>
+    </div>
+    <div id="id-photos-view">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12" id="id-photos-map" style="height: 600px;">
+                {% trans "The map is out there" %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12" id="id-photos-table"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js_templates %}
+    {% include "milcam/js/photo_infowindow_tpl.html" %}
+    {% include "milcam/js/photos_table_tpl.html" %}
+{% endblock %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&language={{ LANGUAGE_CODE }}"></script>
+    <script type="text/javascript" src="{% static "milcam/js/models.js" %}"></script>
+    <script type="text/javascript" src="{% static "milcam/js/views.js" %}"></script>
+    <script type="text/javascript">
+        $(function() {
+            new PhotosMapView();  // init photos view
+        });
+    </script>
+{% endblock %}

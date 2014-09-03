@@ -1,0 +1,25 @@
+# django-milcam
+# MANIFEST.in
+
+include README.rst
+include COPYING
+include TODO
+include milcam/templates/milcam/*
+include milcam/templates/milcam/js/*
+include milcam/locale/en/LC_MESSAGES/*
+include milcam/locale/uk/LC_MESSAGES/*
+include milcam/static/milcam/js/*
+include milcam/static/milcam/lib/backbone/*
+include milcam/static/milcam/lib/backbone-relational/*
+include milcam/static/milcam/lib/backbone-tastypie/*
+include milcam/static/milcam/lib/bootstrap/css/*
+include milcam/static/milcam/lib/bootstrap/fonts/*
+include milcam/static/milcam/lib/bootstrap/js/*
+include milcam/static/milcam/lib/html5shim/*
+include milcam/static/milcam/lib/jquery/*
+include milcam/static/milcam/lib/jquery-cookie/*
+include milcam/static/milcam/lib/js-base64/*
+include milcam/static/milcam/lib/json2/*
+include milcam/static/milcam/lib/respond/*
+include milcam/static/milcam/lib/sprintf.js/*
+include milcam/static/milcam/lib/underscore/*
