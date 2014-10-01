@@ -10,7 +10,7 @@ var DeviceModel = Backbone.RelationalModel.extend({
 
 var DevicesCollection = Backbone.Collection.extend({
     model: DeviceModel,
-    url: '/milcam/api/v1/device/?format=json'  // fckng hardcoded api version
+    url: sprintf('%(url)s?format=json', {url: Urls.api_dispatch_list(milcam.API_NAME, 'device')})
 });
 
 
@@ -36,5 +36,5 @@ var PhotoModel = Backbone.RelationalModel.extend({
 
 var PhotosCollection = Backbone.Collection.extend({
     model: PhotoModel,
-    url: '/milcam/api/v1/photo/?format=json'  // fckng hardcoded api version
+    url: sprintf('%(url)s?format=json', {url: Urls.api_dispatch_list(milcam.API_NAME, 'photo')})
 });

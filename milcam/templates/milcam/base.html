@@ -44,9 +44,13 @@
         <script type="text/javascript">
             var milcam = {
                     STATIC_URL: '{% get_static_prefix %}',
+                    API_NAME: '{{ API_NAME }}',
                     LANGUAGE: "{{ LANGUAGE_CODE }}"
                 };
         </script>
+
+        {# auto generated js #}
+        <script src="{% url "js_reverse" %}" type="text/javascript"></script>
 
         {# js libs #}
         <script type="text/javascript" src="{% static "milcam/lib/jquery/jquery-1.11.1.js" %}"></script>

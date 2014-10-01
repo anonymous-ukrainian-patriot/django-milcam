@@ -3,8 +3,6 @@
 # django-milcam
 # milcam/api.py
 
-from datetime import date
-
 from tastypie.resources import ModelResource, ALL, ALL_WITH_RELATIONS
 from tastypie import fields
 from tastypie.authorization import ReadOnlyAuthorization
@@ -39,7 +37,7 @@ class PhotoResource(ModelResource):
 
     class Meta:
 
-        queryset = Photo.objects.filter(created__year=date.today().year, created__month=date.today().month, created__day=date.today().day)
+        queryset = Photo.objects.all()
         resource_name = 'photo'
         allowed_methods = ['get', ]
         filtering = {

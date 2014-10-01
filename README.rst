@@ -26,7 +26,7 @@ Installation
 
 Configuration
 -------------
-Add ``'uuidfield'``, ``'geoposition'``, ``'sorl.thumbnail'``, ``'milcam'`` and ``'tastypie'`` to ``settings.INSTALLED_APPS``.
+Add ``'uuidfield'``, ``'geoposition'``, ``'sorl.thumbnail'``, ``'milcam'``, ``'tastypie'`` and ``'django_js_reverse'`` to ``settings.INSTALLED_APPS``.
 
     INSTALLED_APPS = (
         ...,
@@ -35,7 +35,19 @@ Add ``'uuidfield'``, ``'geoposition'``, ``'sorl.thumbnail'``, ``'milcam'`` and `
         'geoposition',
         'sorl.thumbnail',
         'tastypie',
+        'django_js_reverse',
         'milcam',
+
+        ...,
+
+    )
+
+Add ``'milcam.context_processors.api_name'`` to ``settings.TEMPLATE_CONTEXT_PROCESSORS``.
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+        ...,
+
+        'milcam.context_processors.api_name',
 
         ...,
 
