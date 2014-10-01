@@ -44,7 +44,7 @@ Add ``'uuidfield'``, ``'geoposition'``, ``'sorl.thumbnail'``, ``'milcam'``, ``'t
 
 Add ``'milcam.context_processors.api_name'`` to ``settings.TEMPLATE_CONTEXT_PROCESSORS``.
 
-TEMPLATE_CONTEXT_PROCESSORS = (
+    TEMPLATE_CONTEXT_PROCESSORS = (
         ...,
 
         'milcam.context_processors.api_name',
