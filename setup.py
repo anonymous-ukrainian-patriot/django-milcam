@@ -23,7 +23,7 @@ setup(
         'django-uuidfield==0.5.0',
         'django-annoying==0.8.0',
         'django-tastypie==0.11.1',
-        'django-js-reverse==0.3.3',
+        'django-js-reverse==0.9.1',
     ],
     author="Anonymous Ukrainian Patriot",
     author_email="anonymous.ukrainian.patriot@gmail.com",
