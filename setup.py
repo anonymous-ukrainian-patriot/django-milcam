@@ -15,7 +15,7 @@ setup(
     version=__version__,
     packages=find_packages(),
     install_requires=[
-        'Django==1.6.7',
+        'Django==1.11.29',
         'pytz==2014.4',
         'django-geoposition==0.2.2',
         'PIL==1.1.7',
